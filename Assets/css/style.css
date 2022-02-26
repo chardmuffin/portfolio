@@ -35,7 +35,7 @@ section {
 }
 
 .content {
-    flex: 5;
+    flex: 4;
     padding: 0 20px;
 }
 
@@ -64,6 +64,7 @@ header {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
+    align-items: center;
     z-index: 9999;
 }
 
@@ -94,7 +95,6 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
 }
 
@@ -158,6 +158,45 @@ footer {
 .work {
     background: var(--primary-color);
 }
+
+.work a {
+    text-decoration: none;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.work .card {
+    position: relative;
+}
+
+.work .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work .card:first-child{
+    flex: 1 1 100%;
+}
+
+.work .card:not(:first-child) {
+    flex: 1 1 40%;
+    min-width: 400px;
+    margin-top: 20px;
+}
+
+.work .card:nth-child(even) {
+    margin-right: 20px;
+}
+
+.work .overlay {
+    position: absolute;
+    bottom: 15%;
+}
+
 /* work style */
 
 
