@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --primary-color: rgb(240, 240, 240);
+    --primary-color: rgb(230, 230, 230);
     --secondary-color: black;
     --tertiary-color: slategray;
 }
@@ -13,7 +13,7 @@
 /* general styles (practically global) */
 body {
     color: var(--tertiary-color);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 section {
@@ -38,12 +38,8 @@ section {
     flex: 4;
     padding: 0 20px;
 }
-
-.primary-border {
-    border-color: var(--primary-color);
-}
   
-.secondary-border {
+.border {
     border-color: var(--tertiary-color);
 }
 /* general styles (practically global) */
@@ -69,7 +65,7 @@ header {
 }
 
 header h1 {
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255,255,255, .7);
     padding: 0 25px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px var(--secondary-color);
@@ -103,8 +99,8 @@ header nav ul li a {
     padding: 10px 40px;
     margin: 0 20px;
     font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255,255,255, 0.7);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(255,255,255, .7);
     border-radius: 15px;
     box-shadow: 5px 5px 10px var(--secondary-color);
 }
@@ -148,7 +144,7 @@ footer {
 /* about me style */
 .intro p {
     line-height: 1.7;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-size: 20px;
 }
 /* about me style */
@@ -159,17 +155,24 @@ footer {
     background: var(--primary-color);
 }
 
+.work .card {
+    position: relative;
+}
+
 .work a {
     text-decoration: none;
+    color: var(--secondary-color);
 }
 
 .work img {
     width: 100%;
+    opacity: .6;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--secondary-color);
 }
 
-.work .card {
-    position: relative;
+.work .card:hover img {
+    opacity: 1;
 }
 
 .work .content {
@@ -184,7 +187,7 @@ footer {
 
 .work .card:not(:first-child) {
     flex: 1 1 40%;
-    min-width: 400px;
+    min-width: 300px;
     margin-top: 20px;
 }
 
@@ -193,10 +196,25 @@ footer {
 }
 
 .work .overlay {
+    opacity: 1;
+    background-color: white;
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 7px 50px 7px 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-shadow: 0 0 3px var(--secondary-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 
+.work .overlay p {
+    text-shadow: none;
+    font-size: 18px;
+    font-style: italic;
+    margin: 5px 0;
+}
 /* work style */
 
 
