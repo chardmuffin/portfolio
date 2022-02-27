@@ -457,6 +457,7 @@ footer {
         margin-left: -100px;            /* offset image by new radius to center*/
         top: -170px;
         outline: none;
+        box-shadow: 0 0 10px 10px var(--secondary-color);
     }
 
     .intro article {
@@ -481,7 +482,44 @@ footer {
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
 
+    /* resize and position headshot */
+    .intro .headshot img {
+        width: 140px;
+        margin-left: -70px;            /* offset image by new radius to center*/
+        top: -100px;
+    }
+
+    .hero {
+        height: 40vw;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header ul li {
+        margin: 10px auto;
+    }
+
     section {
         padding: 30px 10px;
+        scroll-margin-top: 0px;
+    }
+
+    .work .card {
+        padding: 0 20px;
+    }
+
+    .work .card:not(:first-child) {             
+        margin-top: 20px;
+    }
+    
+    .work .card:nth-child(even) {       /*remove gaps between cards when all are vertical*/
+        margin-right: 0px;
+    }
+
+    .contact ul {
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
     }
 }
