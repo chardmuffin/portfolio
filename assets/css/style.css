@@ -365,6 +365,7 @@ footer {
 /* smaller screens */
 @media screen and (max-width: 945px) {
 
+    /* move section title above content, and switch border from right to bottom */
     .section-title {
         width: 100%;
         font-size: 38px;
