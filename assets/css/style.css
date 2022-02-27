@@ -146,10 +146,9 @@ header nav ul li a:hover {
     margin-left: -138px;            /* offset image by radius to center*/
     top: -235px;
     border: 3px solid var(--primary-color);
-    outline: 8px solid var(--secondary-color);
     background-color: var(--primary-color);
-    box-shadow: 10px 10px 10px var(--secondary-color);
     border-radius: 50%;
+    box-shadow: 0 0 10px 10px var(--secondary-color);
 }
 
 .intro article {
@@ -423,6 +422,7 @@ footer {
         background-image: url(../images/MCEscher_DrawingHands.jpg);
         background-size: contain;
         background-position: top;
+        position: relative;
     }
 
     header h1 {
@@ -456,8 +456,6 @@ footer {
         width: 200px;
         margin-left: -100px;            /* offset image by new radius to center*/
         top: -170px;
-        outline: none;
-        box-shadow: 0 0 10px 10px var(--secondary-color);
     }
 
     .intro article {
@@ -487,14 +485,11 @@ footer {
         width: 140px;
         margin-left: -70px;            /* offset image by new radius to center*/
         top: -100px;
+        box-shadow: 0 0 20px 10px var(--secondary-color);
     }
 
     .hero {
         height: 40vw;
-    }
-
-    header {
-        position: relative;
     }
 
     header ul li {
