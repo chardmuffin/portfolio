@@ -149,7 +149,7 @@ header nav ul li a:hover {
     outline: 8px solid var(--secondary-color);
     background-color: var(--primary-color);
     box-shadow: 10px 10px 10px var(--secondary-color);
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 .intro article {
@@ -313,8 +313,8 @@ footer {
 @media screen and (max-width: 1350px) {
 
     section {
-        padding: 40px;
         scroll-margin-top: 40px;
+        padding: 60px 50px;
     }
 
     .section-title {
@@ -387,8 +387,8 @@ footer {
     }
 
     section {
-        padding: 30px;
         flex-direction: column;
+        padding: 40px 20px;
     }
     
     .content {
@@ -413,11 +413,15 @@ footer {
 /* MEDIA QUERY FOR TABLETS AND SMALLER*/
 @media screen and (max-width: 768px) {
 
+    section {
+        padding: 40px 20px;
+    }
+
     header {
         padding: 10px;
         display: block;
         background-image: url(../images/MCEscher_DrawingHands.jpg);
-        background-size: cover;
+        background-size: contain;
         background-position: top;
     }
 
@@ -442,7 +446,7 @@ footer {
 
     .hero {
         background-image: url(../images/MCEscher_DrawingHands.jpg);
-        background-size: cover;
+        background-size: contain;
         background-position: top;
         height: 45vw;
     }
@@ -476,4 +480,7 @@ footer {
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
 
+    section {
+        padding: 30px 10px;
+    }
 }
