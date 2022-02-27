@@ -149,7 +149,7 @@ header nav ul li a:hover {
     outline: 8px solid var(--secondary-color);
     background-color: var(--primary-color);
     box-shadow: 10px 10px 10px var(--secondary-color);
-    border-radius: 50% !important;
+    border-radius: 50%;
 }
 
 .intro article {
@@ -456,6 +456,7 @@ footer {
         width: 200px;
         margin-left: -100px;            /* offset image by new radius to center*/
         top: -170px;
+        outline: none;
     }
 
     .intro article {
