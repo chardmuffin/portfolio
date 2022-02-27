@@ -1,0 +1,341 @@
+/* global style & vars */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: rgb(230, 230, 230);
+    --secondary-color: black;
+    --tertiary-color: slategray;
+}
+/* global style & vars */
+
+
+/* general styles (practically global) */
+body {
+    color: var(--tertiary-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section {
+    padding: 60px;
+    justify-content: space-between;
+    display: flex;
+    scroll-margin-top: 35px;            /* prevents anchor links scrolling too far due to sticky header */
+}
+
+.section-title {
+    font-size: 48px;
+    color: var(--secondary-color);
+    border-right: 8px solid;
+    text-shadow: 0 0 10px var(--tertiary-color);
+    text-align: end;
+    padding: 0 20px;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.content {
+    flex: 4;
+    padding: 0 20px;
+}
+  
+.primary-border {
+    border-color: var(--primary-color);
+}
+
+.secondary-border {
+    border-color: var(--secondary-color);
+}
+
+.tertiary-border {
+    border-color: var(--tertiary-color);
+}
+/* general styles (practically global) */
+
+
+/* apply style to header*/
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../images/escher-metamorphose.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    align-items: center;
+    z-index: 9999;
+}
+
+header h1 {
+    background-color: rgba(255,255,255, .7);
+    padding: 0 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px var(--secondary-color);
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 a {
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+header h1:hover {
+    background-color: white;
+    text-shadow: none;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    padding: 10px 40px;
+    margin: 0 20px;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(255,255,255, .7);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px var(--secondary-color);
+}
+
+header nav ul li a:hover {
+    background: white;
+    text-shadow: none;
+}
+/* apply style to header*/
+
+
+/* hero style */
+.hero {
+    background-image: url("../images/escher-metamorphose.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 20vw;                   /* allow hero height to scale with screen size*/
+}
+/* hero style */
+
+
+/* about me style */
+.intro {
+    background-color: var(--primary-color);
+    justify-content: center;
+    position: relative;
+}
+
+.intro .headshot img {
+    width: 276px;
+    position: absolute;
+    left: 50%;                      /* center image */
+    margin-left: -138px;            /* offset image by radius to center*/
+    top: -235px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    outline: 8px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    box-shadow: 10px 10px 10px var(--secondary-color);
+}
+
+.intro article {
+    line-height: 1.5;
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+/* about me style */
+
+
+/* work style */
+.work {
+    background: white;
+}
+
+.work .card {
+    position: relative;
+}
+
+.work a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.work img {
+    width: 100%;
+    opacity: .6;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--secondary-color);
+}
+
+.work .card:hover img {
+    opacity: 1;
+}
+
+.work .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work .card:first-child{
+    flex: 1 1 100%;
+}
+
+.work .card:not(:first-child) {
+    flex: 1 1 40%;
+    min-width: 300px;
+    margin-top: 20px;
+}
+
+.work .card:nth-child(even) {
+    margin-right: 20px;
+}
+
+.work .overlay {
+    opacity: 1;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 7px 50px 7px 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-shadow: 0 0 3px var(--secondary-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.work .overlay p {
+    text-shadow: none;
+    font-size: 18px;
+    font-style: italic;
+    margin: 5px 0;
+}
+/* work style */
+
+
+/* contact me styles */
+.contact {
+    background: var(--secondary-color);
+    align-items: center;
+}
+
+.contact h2 {
+    color: var(--primary-color);
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.contact ul li {
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    margin: 0 20px;
+    font-size: .9vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(255,255,255, .7);
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px var(--tertiary-color);
+}
+
+.contact ul li span {
+    font-size: 20px;
+}
+
+.contact ul li .hovered {           /* for hiding/displaying content when hovered*/
+    display: none;
+}
+
+.contact ul li:hover {
+    background: white;
+    text-shadow: none;
+}
+
+.contact ul li:hover .hovered {     /* for hiding/displaying content when hovered*/
+    display: block;
+}
+
+.contact ul li:hover .initial {     /* for hiding/displaying content when hovered*/
+    display: none;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    line-height: .8;
+    align-items: center;
+}
+
+.contact a img {
+    width: 40px;
+    padding-right: 5px;
+}
+
+#github-logo {
+    width: 78px;
+    height: 32px;
+}
+
+#github-octocat {
+    width: 32px;
+    height: 32px;
+}
+/* contact me styles */
+
+footer {
+    background: var(--primary-color);
+    padding: 35px 40px;
+    line-height: 1.3;
+    text-align: right;
+    color: var(--secondary-color)
+}
+
+/* MEDIA QUERY FOR  SMALLER DESKTOP SCREENS AND SMALLER*/
+@media screen and (max-width: 1250px) {
+
+    .intro .headshot img {
+        width: 170px;
+        margin-left: -85px;            /* offset image by new radius to center*/
+        top: -140px;
+    }
+
+    .contact ul li {
+        padding: 5px 20px;
+        margin: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER*/
+@media screen and (max-width: 768px) {
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+}
