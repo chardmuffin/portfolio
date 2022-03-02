@@ -389,6 +389,10 @@ footer {
         flex-direction: column;
         padding: 40px 20px;
     }
+
+    section article {
+        text-align: center;
+    }
     
     .content {
         padding: 20px 0;
